@@ -1,5 +1,5 @@
 # itpu-design-patterns-09-2024
-- [repo](https://github.com/AndreiRohau/itpu-design-patterns-09-2024)
+- [repo](https://github.com/AndreiRohau/itpu-design-patterns-09-2025)
 - presentations' location: [Mentimeter / My presentations / BS_S5 Design Patterns](https://www.mentimeter.com/app/folder/2549145)
 
 JDK 17
