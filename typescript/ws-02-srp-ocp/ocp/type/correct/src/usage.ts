@@ -3,6 +3,7 @@ import { Type } from './Type';
 import { TypeA } from './TypeA';
 import { TypeB } from './TypeB';
 import { TypeC } from './TypeC';
+import { TypeD} from './TypeD';
 
 function main(): void {
     // input
@@ -10,6 +11,7 @@ function main(): void {
         new TypeA(),
         new TypeB(),
         new TypeC(),
+        new TypeD(),
     ];
 
     // processing

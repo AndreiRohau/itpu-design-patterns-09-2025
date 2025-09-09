@@ -4,10 +4,11 @@ console.log("works")
 import { Type } from './Type';
 import { TypeA } from './TypeA';
 import { TypeB } from './TypeB';
+import { TypeC } from './TypeC';
 
 function main() {
     // input
-    const list: Type[] = [new TypeA(), new TypeB()];
+    const list: Type[] = [new TypeA(), new TypeB(), new TypeC()];
 
     // processing
     handleTypes(list);
@@ -25,6 +26,9 @@ function handleTypes(list: Type[]) {
             case 'TypeB':
                 executeTypeBFunc();
                 break;
+            case 'TypeC':
+                executeTypeCFunc();
+                break;
             default:
                 executeUnknownFunc(type);
         }
@@ -37,6 +41,10 @@ function executeTypeAFunc() {
 
 function executeTypeBFunc() {
     console.log('Here is the different logic to handle TypeB');
+}
+
+function executeTypeCFunc() {
+    console.log('Here is the different logic to handle TypeC');
 }
 
 function executeUnknownFunc(type: string) {

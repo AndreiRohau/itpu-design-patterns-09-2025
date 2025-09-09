@@ -2,7 +2,7 @@ package com.arohau.srp.userService;
 
 public class UserService {
 
-//    private static UserService userService = null;
+    private static UserService userService = null;
 
     private PasswordComplexityValidator passwordComplexityValidator;
 
@@ -10,15 +10,15 @@ public class UserService {
         this.passwordComplexityValidator = passwordComplexityValidator;
     }
 
-//    public static UserService getUserServiceInstance() {
-//        synchronized (userService) {
-//            if (userService == null) {
-//                userService = new UserService(() -> {
-//                });
-//            }
-//        }
-//        return userService;
-//    }
+    public static UserService getUserServiceInstance() {
+        synchronized (userService) {
+            if (userService == null) {
+                userService = new UserService(() -> {
+                });
+            }
+        }
+        return userService;
+    }
 
     public void create(String[] args) {
         // password complexity validation
