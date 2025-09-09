@@ -5,6 +5,7 @@ public class UserService {
 //    private static UserService userService = null;
 
     private PasswordComplexityValidator passwordComplexityValidator;
+
     private UserService(PasswordComplexityValidator passwordComplexityValidator) {
         this.passwordComplexityValidator = passwordComplexityValidator;
     }
