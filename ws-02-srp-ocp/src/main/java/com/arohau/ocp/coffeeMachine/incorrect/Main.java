@@ -1,8 +1,8 @@
-package com.arohau.ocp.coffeeMachine;
+package com.arohau.ocp.coffeeMachine.incorrect;
 
-import com.arohau.ocp.coffeeMachine.domain.Coffee;
-import com.arohau.ocp.coffeeMachine.domain.CoffeeSelection;
-import com.arohau.ocp.coffeeMachine.domain.GroundCoffee;
+import com.arohau.ocp.coffeeMachine.incorrect.domain.Coffee;
+import com.arohau.ocp.coffeeMachine.incorrect.domain.CoffeeSelection;
+import com.arohau.ocp.coffeeMachine.incorrect.domain.GroundCoffee;
 
 import java.util.HashMap;
 import java.util.Map;

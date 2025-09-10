@@ -1,4 +1,4 @@
-package com.arohau.ocp.coffeeMachine;
+package com.arohau.ocp.coffeeMachine.incorrect;
 
 public class CoffeeException extends Exception {
     public CoffeeException(String message) {

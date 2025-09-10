@@ -1,4 +1,4 @@
-package com.arohau.srp.userService;
+package com.arohau.srp.userService.incorrect;
 
 public interface PasswordComplexityValidator {
     void validatePasswordComplexity();

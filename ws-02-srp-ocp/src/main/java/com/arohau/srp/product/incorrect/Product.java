@@ -1,4 +1,4 @@
-package com.arohau.srp.product;
+package com.arohau.srp.product.incorrect;
 
 public class Product {
     private final String title;

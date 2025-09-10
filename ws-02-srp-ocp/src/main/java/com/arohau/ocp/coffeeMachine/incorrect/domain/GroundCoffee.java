@@ -1,4 +1,4 @@
-package com.arohau.ocp.coffeeMachine.domain;
+package com.arohau.ocp.coffeeMachine.incorrect.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

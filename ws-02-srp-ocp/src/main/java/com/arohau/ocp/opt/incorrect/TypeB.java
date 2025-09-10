@@ -1,4 +1,4 @@
-package com.arohau.ocp.opt;
+package com.arohau.ocp.opt.incorrect;
 
 public class TypeB implements Type {
 }
