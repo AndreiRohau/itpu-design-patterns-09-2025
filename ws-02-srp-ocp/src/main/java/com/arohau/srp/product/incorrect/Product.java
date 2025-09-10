@@ -10,6 +10,7 @@ public class Product {
         this.price = price;
         this.taxRate = taxRate;
     }
+
     public Double calculateTax() {
         return this.price * this.taxRate;
     }

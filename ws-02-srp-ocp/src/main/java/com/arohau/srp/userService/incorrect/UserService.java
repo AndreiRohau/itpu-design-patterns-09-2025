@@ -21,6 +21,7 @@ public class UserService {
     }
 
     public void create(String[] args) {
+//        param not null check
         // password complexity validation
         // save user
         saveToDatabse();
@@ -41,6 +42,7 @@ public class UserService {
     // non-complient with SRP, since UserService is responsible for User Data lifecycle
     private void validatePasswordComplexity() {
         // validate password complexity
+        // calculation...
     }
     
     // non-complient with SRP, since UserService is responsible for User Data lifecycle
