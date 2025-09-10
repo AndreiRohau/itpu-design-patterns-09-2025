@@ -1,10 +1,10 @@
-import { Product } from './Product'
+import { IProduct } from './IProduct'
 
 export class TaxCalculator {
     constructor() {
     }
 
-    public calculateTax(product: Product) {
-        return product.getPrice() * product.getTaxRate();
+    public calculateTax(product: IProduct) {
+        return product.price * product.taxRate;
     }
 }

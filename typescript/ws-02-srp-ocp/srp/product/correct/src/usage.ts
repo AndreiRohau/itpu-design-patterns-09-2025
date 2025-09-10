@@ -1,9 +1,10 @@
 console.log("works")
 
-import { Product } from './Product';
 import { TaxCalculator } from './TaxCalculator';
+import { IProduct } from './IProduct'
+import { IProductImpl } from './IProductImpl'
 
-var product: Product = new Product("beans", 100, 0.1);
+var product: IProduct = new IProductImpl("beans", "coffee", 100, 0.1);
 
 var taxCalc: TaxCalculator = new TaxCalculator();
 
