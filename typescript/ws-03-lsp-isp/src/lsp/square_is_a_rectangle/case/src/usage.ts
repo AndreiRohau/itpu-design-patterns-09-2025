@@ -4,9 +4,10 @@ import { Square } from './Square';
 console.log('==========================');
 // expected behaviour
 var rect: Rectangle = new Square(10); // Can be either a Rectangle or a Square
-//rect = new Rectangle(10, 10); // Can be either a Rectangle or a Square
+rect = new Rectangle(10, 10); // Can be either a Rectangle or a Square
 rect.setWidth(20);
 printArea(rect);
+printAreaV2(rect);
 
 function printArea(rect: Rectangle) {
         console.log('rect.getArea() == 200 is ' + (rect.getArea() == 200))
