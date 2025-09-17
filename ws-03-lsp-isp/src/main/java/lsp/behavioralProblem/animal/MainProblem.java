@@ -21,6 +21,7 @@ class Parrot implements Bird{
 class Penguin implements Bird{
     public void fly() {
         // to do
+        // throws unimplemented exception
     }
     public void walk () {
         // to do
