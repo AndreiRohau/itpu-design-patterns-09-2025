@@ -1,6 +1,10 @@
 How to start project ?
 Run: `npm run start`
 
+```
+http://localhost:3000/
+```
+
 ---
 How to use NEST from scratch ?
 ---

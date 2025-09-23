@@ -8,6 +8,7 @@ export function HttpClient(): ApiClient {
     createUser: (user: User) => {
         console.log("user created... in HttpClient")
     },
+
     getUserByEmail: (email: string) => {
         console.log("getting user by email... in HttpClient")
         if (email === "bob@bob.com") {
