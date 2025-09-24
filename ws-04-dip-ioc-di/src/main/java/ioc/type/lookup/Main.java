@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Service service = LookupService.getService();
 
-        Controller controller = new Controller();
+        Controller controller = LookupService.getController();
         controller.initDependencies();
 
         controller.doIt();
