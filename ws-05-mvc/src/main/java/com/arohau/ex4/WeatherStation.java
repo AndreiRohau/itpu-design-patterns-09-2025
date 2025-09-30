@@ -10,9 +10,9 @@ public class WeatherStation {
     private final Hygrometer hygrometerModel;
     private final List<Observer> observers;
 
-    public WeatherStation() {
-        thermometerModel = new Thermometer();
-        hygrometerModel = new Hygrometer();
+    public WeatherStation(Thermometer thermometer, Hygrometer hygrometer) {
+        thermometerModel = thermometer;
+        hygrometerModel = hygrometer;
         observers = new ArrayList<>();
     }
 

@@ -8,6 +8,7 @@ public class WeatherView implements Observer {
         model.registerObserver(this);
     }
 
+    @Override
     public void update() {
         displayTemperature(model.readCelsius(), model.readFahrenheit(), model.readKelvin());
         displayHumidity(model.readHumidity());

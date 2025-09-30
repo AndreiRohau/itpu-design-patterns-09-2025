@@ -6,15 +6,15 @@ package com.arohau.ex4;
 public class Main {
     public static void main(String[] args) {
         // Create Model, View, and Controller
-        WeatherStation model = new WeatherStation();
-        WeatherView view = new WeatherView(model);
+        WeatherStation facadeModel = new WeatherStation(new Thermometer(), new Hygrometer());
+        WeatherView view = new WeatherView(facadeModel);
         System.out.println("Basic status");
         view.update();
 
-        WeatherController controller = new WeatherController(model);
+        WeatherController controller = new WeatherController(facadeModel);
         // Change Weather Station data using Controller
         controller.writeCelsiusAndWriteHumidity(20.0, 85.0);
         controller.writeCelsiusAndWriteHumidity(30.0, 95.0);
-        model.removeObserver(view);
+        facadeModel.removeObserver(view);
     }
 }

@@ -1,13 +1,13 @@
 package com.arohau.ex4;
 
 public class WeatherController {
-    private final WeatherStation model;
+    private final WeatherStation facadeModel;
 
     public WeatherController(WeatherStation model) {
-        this.model = model;
+        this.facadeModel = model;
     }
 
     public void writeCelsiusAndWriteHumidity(Double celsius, Double humidity) {
-        model.writeCelsiusAndWriteHumidity(celsius, humidity);
+        facadeModel.writeCelsiusAndWriteHumidity(celsius, humidity);
     }
 }

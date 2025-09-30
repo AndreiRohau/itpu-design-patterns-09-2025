@@ -8,10 +8,15 @@ public class WeatherView implements Observer {
         model.registerObserver(this);
     }
 
+    @Override
     public void update() {
+        displayTemperature(model.getCelsius(), model.readFahrenheit(), model.readKelvin());
+    }
+
+    public void displayTemperature(double celsius, double fahrenheit, double kelvin) {
         System.out.println("Temperature:");
-        System.out.printf("\t%g Celsius\n", model.getCelsius());
-        System.out.printf("\t%g Fahrenheit\n", model.readFahrenheit());
-        System.out.printf("\t%g Kelvin\n", model.readKelvin());
+        System.out.printf("\t%g Celsius\n", celsius);
+        System.out.printf("\t%g Fahrenheit\n", fahrenheit);
+        System.out.printf("\t%g Kelvin\n", kelvin);
     }
 }
