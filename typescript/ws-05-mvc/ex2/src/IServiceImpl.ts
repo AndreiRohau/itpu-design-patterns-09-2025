@@ -22,7 +22,7 @@ export class IServiceImpl implements IService {
     setData(iData: IData) {
         // process data
         this.iData = iData
-        // notify subscribers
+        // notify subscribers or observers
         this.notify()
     }
 
