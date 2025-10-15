@@ -18,7 +18,7 @@ public class PayrollService implements PayrollProcessor {
     }
 
     @Override
-    public void processPayroll() {
+    public void processPayrolls() {
         List<Employee> employees = employeeService.loadEmployees();
         for (Employee employee : employees) {
             processPayroll(employee);
@@ -33,8 +33,7 @@ public class PayrollService implements PayrollProcessor {
         payrollSaver.savePayrollData(payStub);
     }
 
-    private PayStub preparePayStub(Employee employee, double grossPay,
-                                   double taxes, double netPay) {
+    private PayStub preparePayStub(Employee employee, double grossPay, double taxes, double netPay) {
         return new PayStub(employee, grossPay, taxes, netPay);
     }
 }
