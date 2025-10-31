@@ -8,8 +8,8 @@ public class InternetProxy implements InternetConnection {
     private RealInternetConnection realInternetConnection;
     private Set<String> allowedWebsites;
 
-    public InternetProxy() {
-        realInternetConnection = new RealInternetConnection();
+    public InternetProxy(RealInternetConnection realInternetConnection) {
+        this.realInternetConnection = realInternetConnection;
         allowedWebsites = new HashSet<>();
         allowedWebsites.add("example.com");
         allowedWebsites.add("google.com");
