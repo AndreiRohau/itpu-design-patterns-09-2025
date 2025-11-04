@@ -17,6 +17,7 @@ export class Singleton {
         return Singleton.instance;
     }
 
+
     public someMethod() {
         // Example method that can be called on the Singleton.
         console.log('Executing some process...');
