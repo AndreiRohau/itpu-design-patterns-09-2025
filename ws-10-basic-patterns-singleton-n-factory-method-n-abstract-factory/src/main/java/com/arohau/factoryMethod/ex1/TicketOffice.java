@@ -13,7 +13,7 @@ public class TicketOffice {
     }
 
     private static void buyATicket(String type) {
-        Ticket ticket = ticketMachine.createTicket(type);
+        Ticket ticket = TicketMachine.createTicket(type);
         System.out.println("One " + type + " ticket is purchased. The price is $" + ticket.getPrice() + ".");
     }
 

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
+// Factory
 public class VendingMachine {
 
     private static final Map<String, Supplier<Snack>> snackMap = new HashMap<>();

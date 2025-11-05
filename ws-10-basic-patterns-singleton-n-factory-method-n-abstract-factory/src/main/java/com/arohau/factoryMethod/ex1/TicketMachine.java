@@ -11,13 +11,12 @@ public class TicketMachine {
             "plane", PlaneTicket::new
     );
 
-    public Ticket createTicket(String type) {
-        Ticket ticket;
-        if (ticketMap.get(type) != null) {
-            ticket = ticketMap.get(type).get();
+    public static Ticket createTicket(String type) {
+        Supplier<Ticket> ticketSupplier = ticketMap.get(type);
+        if (ticketSupplier != null) {
+            return ticketSupplier.get();
         } else {
             throw new IllegalArgumentException("Invalid ticket type.");
         }
-        return ticket;
     }
 }
