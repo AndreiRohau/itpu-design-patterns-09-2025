@@ -17,15 +17,15 @@ export class Manager {
     }
 
     public process(...args: any) {
-                  const commandName = args[0]
-                  let foundCommand = null
-                  if (this._commands.has(commandName)) {
-                      foundCommand = this._commands.get(commandName)
-                  }
-                  if (foundCommand != null) {
-                      foundCommand.execute(args)
-                  } else {
-                      console.log('NO SUCH COMMAND: ', commandName)
+        const commandName = args[0]
+        let foundCommand = null
+        if (this._commands.has(commandName)) {
+            foundCommand = this._commands.get(commandName)
+        }
+        if (foundCommand != null) {
+            foundCommand.execute(args)
+        } else {
+            console.log('NO SUCH COMMAND: ', commandName)
         }
     }
 }

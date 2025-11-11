@@ -43,7 +43,7 @@ class Calculator {
     execute(command: Command): void {
         this.current = command.execute(this.current, command.value);
         this.commands.push(command);
-        console.log(`${this.action(command)}: ${command.value}`);
+        console.log(`Do ${this.action(command)}: ${command.value}`);
     }
 
     undo(): void {
