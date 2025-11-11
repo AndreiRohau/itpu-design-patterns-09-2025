@@ -30,8 +30,8 @@ class CloudProviderService {
 class CloudProviderFacade {
   private _service: CloudProviderService;
 
-  public constructor() {
-    this._service = new CloudProviderService();
+  public constructor(service: CloudProviderService) {
+    this._service = service;
   }
 
   public uploadFile(file: string): string {
@@ -45,6 +45,6 @@ class CloudProviderFacade {
 }
 
 
-const facade = new CloudProviderFacade();
+const facade = new CloudProviderFacade(new CloudProviderService());
 const fileLink = facade.uploadFile("file.txt");
-print("File link:" + fileLink.toString);
+print("File link:" + fileLink);
