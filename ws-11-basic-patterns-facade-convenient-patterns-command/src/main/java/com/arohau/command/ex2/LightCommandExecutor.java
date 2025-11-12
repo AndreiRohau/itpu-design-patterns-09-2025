@@ -1,7 +1,7 @@
 package com.arohau.command.ex2;
 
 public class LightCommandExecutor {
-    public void execute(LightCommand command) {
+    public void executeCommand(LightCommand command) {
         command.execute();
     }
 }

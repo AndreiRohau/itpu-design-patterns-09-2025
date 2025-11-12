@@ -1,17 +1,17 @@
 package com.arohau.facade.ex2;
 
 public class SendMessageFacade {
-    public void sendMessage() {
+    public void sendMessage(String text) {
         Client client = new Client();
         client.connectToServer();
 
-        ClientServer clientServer = new ClientServer();
+        ClientServer clientServer = client.getClientServerInstance();
         clientServer.authenticateClient();
         clientServer.routeToRecipient();
 
-        RecipientServer recipientServer = new RecipientServer();
+        RecipientServer recipientServer = client.getRecipientServerInstance();
         recipientServer.authenticateRecipient();
-        recipientServer.sendMessage();
+        recipientServer.sendMessage(text);
 
         Recipient recipient = new Recipient();
         recipient.receiveMessage();
