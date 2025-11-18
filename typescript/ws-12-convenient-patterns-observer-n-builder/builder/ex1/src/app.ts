@@ -74,7 +74,6 @@ export function builderClient() {
     console.log(everythingBurger.showDetails())
 
     const cheeseBurger: Burger = new BurgerBuilder("Cheese")
-        .addBacon(false)
         .addCheese(true)
         .addTomato(true)
         .build()
