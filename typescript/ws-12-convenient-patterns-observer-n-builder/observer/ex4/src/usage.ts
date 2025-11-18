@@ -13,8 +13,11 @@ library.attach(player2)
 let player3 = new MediaPlayer()
 library.attach(player3)
 
+console.log('--------')
 library.addMedia("video.mp4")
+console.log('--------')
 library.addMedia("audio.mp3")
+console.log('--------')
 
 // detached players
 library.detach(player3)

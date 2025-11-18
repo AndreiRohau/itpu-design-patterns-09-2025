@@ -16,7 +16,9 @@ observerB.subscribe(data => {
 });
 
 observable.setState(20);
+console.log("")
 observable.setState(30);
+console.log("")
 observable.setState(20);
 
 

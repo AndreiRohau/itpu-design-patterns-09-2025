@@ -2,7 +2,6 @@ import {Subject} from '../Subject'
 import {Observer} from '../Observer'
 
 export class PlaystationStockConcreteSubject implements Subject {
-    private readonly observers: Observer[] = []
     private _quantityInStock: number = 0
     public constructor() { }
     public get quantityInStock() {
@@ -14,6 +13,9 @@ export class PlaystationStockConcreteSubject implements Subject {
             this.notifyAll()
         }
     }
+
+    // part for Subject implementation
+    private readonly observers: Observer[] = []
     public addObserver(observer: Observer): void {
         this.observers.push(observer)
     }
