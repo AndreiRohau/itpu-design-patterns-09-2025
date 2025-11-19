@@ -1,5 +1,8 @@
 package com.arohau.builder.ex3;
 
+import lombok.ToString;
+
+@ToString
 public class Vehicle {
 
     private String fuelType;

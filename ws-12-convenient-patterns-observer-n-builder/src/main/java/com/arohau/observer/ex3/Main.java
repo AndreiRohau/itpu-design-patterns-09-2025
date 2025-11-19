@@ -2,13 +2,16 @@ package com.arohau.observer.ex3;
 
 public class Main {
     public static void main(String[] args) {
-        NewsAgency observable = new NewsAgency();
-        NewsChannel observer = new NewsChannel();
+        NewsAgency publisher = new NewsAgency();
+        NewsChannel observer1 = new NewsChannel();
+        NewsChannel observer2 = new NewsChannel();
 
-        observable.addObserver(observer);
+        publisher.addObserver(observer1);
+        publisher.addObserver(observer2);
         final String news = "we got some hot news for you";
-        observable.setNews(news);
+        publisher.setNews(news);
 
-        System.out.println(observer.getNews().equals(news));
+        System.out.println(observer1.getNews().equals(news));
+        System.out.println(observer2.getNews().equals(news));
     }
 }

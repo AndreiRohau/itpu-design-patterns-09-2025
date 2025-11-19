@@ -2,13 +2,13 @@ package com.arohau.builder.ex3;
 
 import lombok.ToString;
 
-@ToString
+@ToString(callSuper = true)
 public class Car extends Vehicle {
 
     private String make;
     private String model;
 
-    public Car(CarBuilder builder) {
+    private Car(CarBuilder builder) {
         super(builder);
         this.make = builder.make;
         this.model = builder.model;
@@ -30,13 +30,13 @@ public class Car extends Vehicle {
 
         @Override
         public CarBuilder colour(String colour) {
-            this.colour = colour;
+            super.colour(colour);
             return this;
         }
 
         @Override
         public CarBuilder fuelType(String fuelType) {
-            this.fuelType = fuelType;
+            super.fuelType(fuelType);
             return this;
         }
 
