@@ -9,16 +9,16 @@ interface VehicleInspectorVisitor {
 
 class VehicleInspectorVisitorImpl implements VehicleInspectorVisitor {
     visitCar(car: Car): void {
-        console.log(`Visiting ${car.constructor.name} with VehicleInspectorVisitorImpl`)
+        console.log(`Visiting ${car.constructor.name} with visitCar() of VehicleInspectorVisitorImpl`)
     }
     visitVan(van: Van): void {
-        console.log(`Visiting ${van.constructor.name} with VehicleInspectorVisitorImpl`)
+        console.log(`Visiting ${van.constructor.name} with visitVan() of VehicleInspectorVisitorImpl`)
     }
     visitMotorbike(motorbike: Motorbike): void {
-        console.log(`Visiting ${motorbike.constructor.name} with VehicleInspectorVisitorImpl`)
+        console.log(`Visiting ${motorbike.constructor.name} with visitMotorbike() of VehicleInspectorVisitorImpl`)
     }
     visitOwner(owner: VehicleOwner): void {
-        console.log(`Visiting ${owner.constructor.name} with VehicleInspectorVisitorImpl`)
+        console.log(`Visiting ${owner.constructor.name} with visitOwner() of VehicleInspectorVisitorImpl`)
         for (const vehicle of owner.vehicles) {
             vehicle.accept(this)
         }

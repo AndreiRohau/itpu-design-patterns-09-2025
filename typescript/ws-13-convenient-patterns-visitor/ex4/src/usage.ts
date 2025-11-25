@@ -19,21 +19,21 @@ class ShapeVisitor {
 // Concrete Visitors
 class AreaCalculator extends ShapeVisitor {
     public visitCircle(circle: Circle): number {
-        console.log(`Visiting ${circle.constructor.name} with AreaCalculator`)
+        console.log(`Visiting ${circle.constructor.name} with visitCircle() of AreaCalculator`)
         return Math.PI * Math.pow(circle.radius, 2)
     }
     public visitSquare(square: Square): number {
-        console.log(`Visiting ${square.constructor.name} with AreaCalculator`)
+        console.log(`Visiting ${square.constructor.name} with visitSquare() of AreaCalculator`)
         return Math.pow(square.side, 2)
     }
     public visitTriangle(triangle: Triangle): number {
-        console.log(`Visiting ${triangle.constructor.name} with AreaCalculator`)
+        console.log(`Visiting ${triangle.constructor.name} with visitTriangle() of AreaCalculator`)
         // Assuming Heron's formula for triangle area calculation
         const s = (triangle.sideA + triangle.sideB + triangle.sideC) / 2
         return Math.sqrt(s * (s - triangle.sideA) * (s - triangle.sideB) * (s - triangle.sideC))
     }
     public visitCompoundShape(compoundShape: CompoundShape): number {
-        console.log(`Visiting ${compoundShape.constructor.name} with AreaCalculator`)
+        console.log(`Visiting ${compoundShape.constructor.name} with visitCompoundShape() of AreaCalculator`)
         let result = 0
         for (const shape of compoundShape.shapes) {
             result += shape.accept(this)
@@ -44,19 +44,19 @@ class AreaCalculator extends ShapeVisitor {
 
 class PerimeterCalculator extends ShapeVisitor {
     public visitCircle(circle: Circle): number {
-        console.log(`Visiting ${circle.constructor.name} with AreaCalculator`)
+        console.log(`Visiting ${circle.constructor.name} with visitCircle() of PerimeterCalculator`)
         return 2 * Math.PI * circle.radius
     }
     public visitSquare(square: Square): number {
-        console.log(`Visiting ${square.constructor.name} with AreaCalculator`)
+        console.log(`Visiting ${square.constructor.name} with visitSquare() of PerimeterCalculator`)
         return 4 * square.side
     }
     public visitTriangle(triangle: Triangle): number {
-        console.log(`Visiting ${triangle.constructor.name} with AreaCalculator`)
+        console.log(`Visiting ${triangle.constructor.name} with visitTriangle() of PerimeterCalculator`)
         return triangle.sideA + triangle.sideB + triangle.sideC
     }
     public visitCompoundShape(compoundShape: CompoundShape): number {
-        console.log(`Visiting ${compoundShape.constructor.name} with PerimeterCalculator`)
+        console.log(`Visiting ${compoundShape.constructor.name} with visitCompoundShape() of PerimeterCalculator`)
         let result = 0
         for (const shape of compoundShape.shapes) {
             result += shape.accept(this)

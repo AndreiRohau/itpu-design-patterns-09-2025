@@ -25,7 +25,7 @@ class MotorbikeInspector implements VehicleInspector {
 }
 
 interface Vehicle {
-  accept(vehicleInspector: VehicleInspector): void;
+    accept(vehicleInspector: VehicleInspector): void;
 }
 
 class Car implements Vehicle {
