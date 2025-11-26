@@ -97,22 +97,62 @@ class AreaCalculator implements ShapeVisitor {
     }
 }
 
+class PerimeterCalculator implements ShapeVisitor {
+    private double perimeter = 0;
+
+    public void processShapes(List<Shape> shapes) {
+        for (Shape shape : shapes) {
+            shape.accept(this);
+        }
+    }
+
+    @Override
+    public void visit(Circle circle) {
+        // Calculate area of circle and update totalArea
+        perimeter += 2 * Math.PI * circle.getRadiusOfCircle();
+    }
+
+    @Override
+    public void visit(Square square) {
+        // Calculate area of square and update totalArea
+        perimeter += square.getSideOfSquare() * 4;
+    }
+
+    @Override
+    public void visit(Triangle triangle) {
+        // Calculate area of triangle and update totalArea
+        perimeter += (triangle.getBaseOfTriangle() + triangle.getHeightOfTriangle());
+    }
+
+    public double getTotalPerimeter() {
+        return perimeter;
+    }
+}
+
 // Main class
 public class Main {
 //    private static final double EXPECTED = 103.53981;
-    private static final double EXPECTED = 103.53981633974483;
+    private static final double EXPECTED_AREA = 103.53981633974483;
+    private static final double EXPECTED_PERIMETER = 56.41592653589793;
 
     public static void main(String[] args) {
         List<Shape> shapes = new ArrayList<>();
-        shapes.add(new Circle(5));
-        shapes.add(new Square(4));
-        shapes.add(new Triangle(3, 6));
+        shapes.add(new Circle(5)); // ~ 31.4...
+        shapes.add(new Square(4)); // 16
+        shapes.add(new Triangle(3, 6)); // 9
 
         AreaCalculator areaCalculator = new AreaCalculator();
         areaCalculator.processShapes(shapes);
 
         double totalArea = areaCalculator.getTotalArea();
-        System.out.println(EXPECTED == totalArea);
+        System.out.println(EXPECTED_AREA == totalArea);
         System.out.println("Total area: " + totalArea);
+
+        PerimeterCalculator perimeterCalculator = new PerimeterCalculator();
+        perimeterCalculator.processShapes(shapes);
+        double totalPerimeter = perimeterCalculator.getTotalPerimeter();
+        System.out.println(EXPECTED_PERIMETER == totalPerimeter);
+        System.out.println("Total perimeter: " + totalPerimeter);
+
     }
 }
