@@ -2,16 +2,9 @@ package com.arohau.proxy.ex2;
 
 public class MovieMediaPlayer implements MediaPlayer {
 
-    public MovieMediaPlayer() {
-        loadVideo();
-    }
-
     @Override
-    public void playMedia() {
-        System.out.println("Playing video...");
-    }
-
-    private void loadVideo() {
-        System.out.println("Loading up large video...");
+    public void playMedia(String mediaSource) {
+        System.out.println("Loading up video from source: " + mediaSource);
+        System.out.println("Playing video from source: " + mediaSource);
     }
 }

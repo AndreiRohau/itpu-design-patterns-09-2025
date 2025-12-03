@@ -8,20 +8,16 @@ package com.arohau.proxy.ex2;
  */
 public class App {
 
-    private static final MediaPlayerProxy movieMediaPlayer = new MediaPlayerProxy();
-
     public static void main(String[] args) {
-        goToMovieLibrary(movieMediaPlayer);
-        goToFavoriteMovies(movieMediaPlayer);
-    }
+        AuthorityValidator authorityValidator = new AuthorityValidator();
+        MediaPlayer mediaPlayer = new MovieMediaPlayer();
+        MediaPlayer proxy = new MediaPlayerProxy(mediaPlayer, authorityValidator);
 
-    private static void goToMovieLibrary(MediaPlayerProxy movieMediaPlayer) {
-        System.out.println("Loading movie library...");
-        movieMediaPlayer.playMedia();
-    }
+        String mediaSourcePublic = "/video/720/public/some_video_file.mp4";
+        String mediaSourcePrime = "/video/720/prime/some_video_file.mp4";
 
-    private static void goToFavoriteMovies(MediaPlayerProxy movieMediaPlayer) {
-        System.out.println("Loading favorite movies...");
-        movieMediaPlayer.playMedia();
+        proxy.playMedia(mediaSourcePublic);
+        System.out.println();
+        proxy.playMedia(mediaSourcePrime);
     }
 }
