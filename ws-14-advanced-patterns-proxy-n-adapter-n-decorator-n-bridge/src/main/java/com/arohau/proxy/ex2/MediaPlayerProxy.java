@@ -4,8 +4,8 @@ import static java.util.Objects.nonNull;
 
 public class MediaPlayerProxy implements MediaPlayer {
 
-    private MediaPlayer movieMediaPlayer;
-    private AuthorityValidator authorityValidator;
+    private final MediaPlayer movieMediaPlayer;
+    private final AuthorityValidator authorityValidator;
 
     public MediaPlayerProxy(MediaPlayer movieMediaPlayer, AuthorityValidator authorityValidator) {
         this.movieMediaPlayer = movieMediaPlayer;
