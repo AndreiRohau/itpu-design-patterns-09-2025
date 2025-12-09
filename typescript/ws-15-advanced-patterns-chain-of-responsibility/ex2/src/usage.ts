@@ -132,4 +132,4 @@ console.log('--------')
 console.log(calculator2.calculateDiscount(['Electronics', 'Clothing'], 100)); // Output: 72
 console.log(calculator2.calculateDiscount(['Books'], 100)); // Output: 85
 console.log(calculator2.calculateDiscount(['Toys'], 100)); // Output: 100
-console.log(calculator2.calculateDiscount(['Books', 'Clothing'], 100)); // Output: 68 (64)
+console.log(calculator2.calculateDiscount(['Books', 'Clothing'], 100)); // Output: 68
