@@ -10,6 +10,9 @@ public class DevelopmentOperations extends TeamMember {
 
     private final List<JiraStory.JiraStoryType> managedStoryTypes = List.of(JiraStory.JiraStoryType.DEVOPS);
 
+    public DevelopmentOperations() {
+    }
+
     public DevelopmentOperations(TeamMember nextTeamMember) {
         super(nextTeamMember);
     }

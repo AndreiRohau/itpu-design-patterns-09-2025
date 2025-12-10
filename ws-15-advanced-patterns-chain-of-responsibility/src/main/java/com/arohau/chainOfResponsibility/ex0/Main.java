@@ -28,7 +28,8 @@ public class Main {
                 .storyPoints(5)
                 .build();
 
-        TeamLeader teamLeader = initTeam();
+//        TeamLeader teamLeader = initTeam();
+        TeamLeader teamLeader = initTeam_v2();
 
         teamLeader.workOnStory(jiraStory1);
         teamLeader.workOnStory(jiraStory2);
@@ -42,6 +43,16 @@ public class Main {
         BusinessAnalyst businessAnalyst = new BusinessAnalyst(developmentOperations);
         BackendDeveloper backendDeveloper = new BackendDeveloper(businessAnalyst);
         TeamLeader teamLeader = new TeamLeader(backendDeveloper);
+        return teamLeader;
+    }
+
+    private static TeamLeader initTeam_v2() {
+        TeamLeader teamLeader = new TeamLeader();
+        TeamMember be = teamLeader.hasNext(new BackendDeveloper());
+        TeamMember ba = be.hasNext(new BusinessAnalyst());
+        ba.hasNext(new DevelopmentOperations())
+                .hasNext(new FrontendDeveloper())
+                .hasNext(new Tester());
         return teamLeader;
     }
 }

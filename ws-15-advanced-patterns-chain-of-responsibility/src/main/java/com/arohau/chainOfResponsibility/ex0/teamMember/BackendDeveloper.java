@@ -10,6 +10,9 @@ public class BackendDeveloper extends TeamMember {
 
     private final List<JiraStory.JiraStoryType> managedStoryTypes = List.of(JiraStory.JiraStoryType.BACKEND);
 
+    public BackendDeveloper() {
+    }
+
     public BackendDeveloper(TeamMember nextTeamMember) {
         super(nextTeamMember);
     }

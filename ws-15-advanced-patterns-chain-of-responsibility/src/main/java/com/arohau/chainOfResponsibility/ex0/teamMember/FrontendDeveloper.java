@@ -10,6 +10,9 @@ public class FrontendDeveloper extends TeamMember {
 
     private final List<JiraStory.JiraStoryType> managedStoryTypes = List.of(JiraStory.JiraStoryType.FRONTEND);
 
+    public FrontendDeveloper() {
+    }
+
     public FrontendDeveloper(TeamMember nextTeamMember) {
         super(nextTeamMember);
     }

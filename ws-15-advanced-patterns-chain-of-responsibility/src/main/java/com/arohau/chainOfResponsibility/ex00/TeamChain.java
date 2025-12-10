@@ -18,7 +18,7 @@ public class TeamChain implements TeamMember {
         if (result.isEmpty()) {
             defaultAction(jiraStory);
         }
-        return Optional.empty();
+        return result;
     }
 
     public void addFirst(TeamMember teamMember) {

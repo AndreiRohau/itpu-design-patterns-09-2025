@@ -5,8 +5,16 @@ public abstract class TeamMember {
 
     public TeamMember nextTeamMember;
 
+    public TeamMember() {
+    }
+
     public TeamMember(TeamMember nextTeamMember) {
         this.nextTeamMember = nextTeamMember;
+    }
+
+    public TeamMember hasNext(TeamMember nextTeamMember) {
+        this.nextTeamMember = nextTeamMember;
+        return nextTeamMember;
     }
 
     public abstract void workOnStory(JiraStory jiraStory);

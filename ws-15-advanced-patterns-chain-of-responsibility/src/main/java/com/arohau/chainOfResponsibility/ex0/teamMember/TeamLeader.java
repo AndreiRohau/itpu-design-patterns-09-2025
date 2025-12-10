@@ -10,6 +10,9 @@ public class TeamLeader extends TeamMember {
 
     private final List<JiraStory.JiraStoryType> managedStoryTypes = List.of(JiraStory.JiraStoryType.TEAM_LEADER);
 
+    public TeamLeader() {
+    }
+
     public TeamLeader(TeamMember nextTeamMember) {
         super(nextTeamMember);
     }

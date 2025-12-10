@@ -10,6 +10,9 @@ public class Tester extends TeamMember {
 
     private final List<JiraStory.JiraStoryType> managedStoryTypes = List.of(JiraStory.JiraStoryType.TESTER);
 
+    public Tester() {
+    }
+
     public Tester(TeamMember nextTeamMember) {
         super(nextTeamMember);
     }

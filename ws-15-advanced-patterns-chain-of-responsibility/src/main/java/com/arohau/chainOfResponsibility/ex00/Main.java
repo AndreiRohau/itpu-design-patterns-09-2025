@@ -1,5 +1,7 @@
 package com.arohau.chainOfResponsibility.ex00;
 
+import java.util.Optional;
+
 public class Main {
     public static void main(String[] args) {
         JiraStory jiraStory1 = JiraStory.builder()
@@ -28,9 +30,9 @@ public class Main {
 
         TeamMember managerObject = initManagerObject();
 
-        managerObject.workOnStory(jiraStory1);
-        managerObject.workOnStory(jiraStory2);
-        managerObject.workOnStory(jiraStory3); // default action happened
+        Optional<Object> result1 = managerObject.workOnStory(jiraStory1);
+        Optional<Object> result2 = managerObject.workOnStory(jiraStory2);
+        Optional<Object> result3 = managerObject.workOnStory(jiraStory3); // default action happened
     }
 
     private static TeamMember initManagerObject() {
