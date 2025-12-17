@@ -8,31 +8,56 @@ class PaymentProcessor {
         this.strategy = strategy;
     }
 
+    setStrategy(strategy) {
+        this.strategy = strategy;
+    }
+
     processPayment(amount) {
         this.strategy.pay(amount);
     }
 }
 
+// [STRATEGY]
+abstract class PaymentStrategy {
+	abstract pay(amount): void
+}
+
 // [CONCRETE STRATEGY]
-class PayPalPayment {
+class PayPalPayment extends PaymentStrategy {
     pay(amount) {
         console.log(`Processing a payment of ${amount} using PayPal.`);
     }
 }
 
 // [CONCRETE STRATEGY]
-class CreditCardPayment {
+class CreditCardPayment extends PaymentStrategy {
     pay(amount) {
         console.log(`Processing a payment of ${amount} using Credit Card.`);
     }
 }
 
 // [CONCRETE STRATEGY]
-class BitcoinPayment {
+class BitcoinPayment extends PaymentStrategy {
     pay(amount) {
         console.log(`Processing a payment of ${amount} using Bitcoin.`);
     }
 }
+
+const paymentProcessor = new PaymentProcessor(null)
+const payPalPaymentStrategy: PaymentStrategy = new PayPalPayment()
+const creditCardPaymentStrategy: PaymentStrategy = new CreditCardPayment()
+const bitcoinPaymentStrategy: PaymentStrategy = new BitcoinPayment()
+
+paymentProcessor.setStrategy(payPalPaymentStrategy)
+paymentProcessor.processPayment(1)
+paymentProcessor.setStrategy(creditCardPaymentStrategy)
+paymentProcessor.processPayment(2)
+paymentProcessor.setStrategy(bitcoinPaymentStrategy)
+paymentProcessor.processPayment(3)
+
+
+
+console.log('----')
 
 const payPalPayment = new PaymentProcessor(new PayPalPayment());
 const creditCardPayment = new PaymentProcessor(new CreditCardPayment());

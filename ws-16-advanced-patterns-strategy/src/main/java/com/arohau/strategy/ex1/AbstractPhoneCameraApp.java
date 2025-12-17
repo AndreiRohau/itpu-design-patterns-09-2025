@@ -1,6 +1,6 @@
 package com.arohau.strategy.ex1;
 
-public abstract class PhoneCameraApp {
+public abstract class AbstractPhoneCameraApp {
 	private ShareStrategy shareStrategy;
 	
 	public void setShareStrategy(ShareStrategy shareStrategy) {
@@ -9,6 +9,7 @@ public abstract class PhoneCameraApp {
 	public void share() {
 		shareStrategy.share();
 	}
+
 	public void take() {
 		System.out.println("Taking the photo");
 	}

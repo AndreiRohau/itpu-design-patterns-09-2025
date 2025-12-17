@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
  
 	public static void main(String[] args) {
-		PhoneCameraApp cameraApp = new BasicCameraApp();
+		AbstractPhoneCameraApp cameraApp = new BasicCameraApp();
 		String share = getSharing();
 		switch (share) {
 			case("t"): cameraApp.setShareStrategy(new Txt()); break;
